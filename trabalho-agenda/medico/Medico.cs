@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace trabalho_agenda.medico
+namespace trabalho_agenda.Medico
 {
     public class Medico:Pessoa
     {

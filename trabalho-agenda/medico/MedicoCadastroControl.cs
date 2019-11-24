@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace trabalho_agenda.medico
+namespace trabalho_agenda.Medico
 {
     public partial class MedicoCadastroControl : UserControl
     {

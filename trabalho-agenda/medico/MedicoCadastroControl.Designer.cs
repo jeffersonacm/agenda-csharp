@@ -1,4 +1,4 @@
-﻿namespace trabalho_agenda.medico
+﻿namespace trabalho_agenda.Medico
 {
     partial class MedicoCadastroControl
     {

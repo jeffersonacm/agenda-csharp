@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using trabalho_agenda.auth;
+using trabalho_agenda.Auth;
 using trabalho_agenda.Consulta;
-using trabalho_agenda.medico;
+using trabalho_agenda.Medico;
 using trabalho_agenda.Paciente;
 
 namespace trabalho_agenda

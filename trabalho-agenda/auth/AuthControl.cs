@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace trabalho_agenda.auth
+namespace trabalho_agenda.Auth
 {
     public partial class AuthControl : UserControl
     {

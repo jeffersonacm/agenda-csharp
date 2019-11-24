@@ -1,4 +1,4 @@
-﻿namespace trabalho_agenda.auth
+﻿namespace trabalho_agenda.Auth
 {
     partial class AuthControl
     {
