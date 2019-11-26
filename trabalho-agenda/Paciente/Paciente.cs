@@ -10,7 +10,6 @@ namespace trabalho_agenda.Paciente
     [Serializable]
     public class Paciente:Pessoa
     {
-        [XmlElement("TipoSang")]
         public string TipoSang { get; set; }
     }
 }

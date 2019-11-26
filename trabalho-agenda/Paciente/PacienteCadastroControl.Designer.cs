@@ -76,7 +76,7 @@
             this.groupBox1.Controls.Add(this.lblTelefone);
             this.groupBox1.Controls.Add(this.lblNome);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(134, 42);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(391, 217);
             this.groupBox1.TabIndex = 3;
@@ -193,7 +193,7 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(666, 54);
+            this.button2.Location = new System.Drawing.Point(535, 15);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 23);
             this.button2.TabIndex = 43;
@@ -203,7 +203,7 @@
             // buttonCadastrar
             // 
             this.buttonCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonCadastrar.Location = new System.Drawing.Point(566, 54);
+            this.buttonCadastrar.Location = new System.Drawing.Point(435, 15);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(89, 23);
             this.buttonCadastrar.TabIndex = 42;
@@ -336,7 +336,7 @@
             this.groupBox2.Controls.Add(this.txtBairro);
             this.groupBox2.Controls.Add(this.txtRua);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(134, 292);
+            this.groupBox2.Location = new System.Drawing.Point(3, 253);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(391, 209);
             this.groupBox2.TabIndex = 27;

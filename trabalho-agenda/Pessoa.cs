@@ -16,6 +16,17 @@ namespace trabalho_agenda
         public string Email { get; set; }
         public DateTime DataNasc { get; set; }
         public Endereco Endereço { get; set; }
+
+        public bool cpfExiste()
+        {
+            EditorXML<Usuario> editorXML = new EditorXML<Usuario>();
+            foreach (Usuario x in (List<Usuario>)editorXML.Deserializar("usuarios.xml"))
+            {
+                if (this.CPF == x.CPF)
+                    return true;
+            }
+            return false;
+        }
     }
     public struct Endereco
     {
@@ -26,4 +37,6 @@ namespace trabalho_agenda
         public string Complemento { get; set; }
         public string CEP { get; set; }
     }
+
+
 }

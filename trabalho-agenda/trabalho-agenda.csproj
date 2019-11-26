@@ -49,10 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="auth\AuthControl.cs">
+    <Compile Include="Auth\AuthControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="auth\AuthControl.Designer.cs">
+    <Compile Include="Auth\AuthControl.Designer.cs">
       <DependentUpon>AuthControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Base.cs">
@@ -73,10 +73,10 @@
       <DependentUpon>ConsultaCadastroControl.cs</DependentUpon>
     </Compile>
     <Compile Include="EditorXML.cs" />
-    <Compile Include="medico\MedicoCadastroControl.cs">
+    <Compile Include="Medico\MedicoCadastroControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="medico\MedicoCadastroControl.Designer.cs">
+    <Compile Include="Medico\MedicoCadastroControl.Designer.cs">
       <DependentUpon>MedicoCadastroControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Paciente\PacienteCadastroControl.cs">
@@ -85,14 +85,13 @@
     <Compile Include="Paciente\PacienteCadastroControl.Designer.cs">
       <DependentUpon>PacienteCadastroControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="root.cs" />
-    <Compile Include="medico\Medico.cs" />
+    <Compile Include="Medico\Medico.cs" />
     <Compile Include="Paciente\Paciente.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="auth\AuthControl.resx">
+    <EmbeddedResource Include="Auth\AuthControl.resx">
       <DependentUpon>AuthControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Base.resx">
@@ -101,7 +100,7 @@
     <EmbeddedResource Include="Consulta\ConsultaCadastroControl.resx">
       <DependentUpon>ConsultaCadastroControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="medico\MedicoCadastroControl.resx">
+    <EmbeddedResource Include="Medico\MedicoCadastroControl.resx">
       <DependentUpon>MedicoCadastroControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paciente\PacienteCadastroControl.resx">

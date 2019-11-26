@@ -35,13 +35,14 @@
             this.btnPaciente = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.authControl1 = new trabalho_agenda.auth.AuthControl();
+            this.authControl1 = new trabalho_agenda.Auth.AuthControl();
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPanel
             // 
+            this.menuPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.menuPanel.Controls.Add(this.btnSair);
             this.menuPanel.Controls.Add(this.btnConsulta);
             this.menuPanel.Controls.Add(this.btnMedico);
@@ -160,6 +161,6 @@
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSair;
-        private auth.AuthControl authControl1;
+        private Auth.AuthControl authControl1;
     }
 }

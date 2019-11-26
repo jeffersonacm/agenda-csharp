@@ -20,21 +20,28 @@ namespace trabalho_agenda.Medico
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
             Medico medico = new Medico();
-            medico.Nome = textNome.Text;
             medico.CPF = maskedTextCPF.Text;
-            medico.DataNasc = dateTimeNascimento.Value;
-            medico.Email = textBoxEmail.Text;
-            medico.Especialidade = textEspecialidade.Text;
-            medico.Telefone = textTelefone.Text;
-            Endereco endereco = new Endereco();
-            endereco.Bairro = txtBairro.Text;
-            endereco.CEP = mskdCep.Text;
-            endereco.Cidade = txtCidade.Text;
-            endereco.Complemento = txtComp.Text;
-            endereco.Estado = txtEstado.Text;
-            endereco.Rua = txtRua.Text;
-            medico.Endereço = endereco;
-            new EditorXML<Medico>().Serializar(medico, "medicos.xml");
+            if (medico.cpfExiste())
+                MessageBox.Show("CPF ja cadastrado.");
+            else
+            {
+                medico.Nome = textNome.Text;
+
+                medico.DataNasc = dateTimeNascimento.Value;
+                medico.Email = textBoxEmail.Text;
+                medico.Especialidade = textEspecialidade.Text;
+                medico.Telefone = textTelefone.Text;
+                Endereco endereco = new Endereco();
+                endereco.Bairro = txtBairro.Text;
+                endereco.CEP = mskdCep.Text;
+                endereco.Cidade = txtCidade.Text;
+                endereco.Complemento = txtComp.Text;
+                endereco.Estado = txtEstado.Text;
+                endereco.Rua = txtRua.Text;
+                medico.Endereço = endereco;
+                new EditorXML<Medico>().Serializar(medico, "medicos.xml");
+                MessageBox.Show("Medico Cadastrado!");
+            }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -56,6 +63,21 @@ namespace trabalho_agenda.Medico
             {
                 MessageBox.Show("CEP digitado inválido");
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

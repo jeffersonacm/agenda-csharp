@@ -162,17 +162,18 @@
             // btnAlterar
             // 
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAlterar.Location = new System.Drawing.Point(686, 66);
+            this.btnAlterar.Location = new System.Drawing.Point(534, 14);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(84, 23);
             this.btnAlterar.TabIndex = 56;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // buttonCadastrar
             // 
             this.buttonCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonCadastrar.Location = new System.Drawing.Point(581, 66);
+            this.buttonCadastrar.Location = new System.Drawing.Point(429, 14);
             this.buttonCadastrar.Name = "buttonCadastrar";
             this.buttonCadastrar.Size = new System.Drawing.Size(89, 23);
             this.buttonCadastrar.TabIndex = 55;
@@ -304,11 +305,12 @@
             this.groupBox1.Controls.Add(this.btnConsultar);
             this.groupBox1.Controls.Add(this.txtBairro);
             this.groupBox1.Controls.Add(this.txtRua);
-            this.groupBox1.Location = new System.Drawing.Point(155, 289);
+            this.groupBox1.Location = new System.Drawing.Point(3, 237);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(398, 233);
             this.groupBox1.TabIndex = 57;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -324,11 +326,12 @@
             this.groupBox2.Controls.Add(this.maskedTextCPF);
             this.groupBox2.Controls.Add(this.lblCPF);
             this.groupBox2.Controls.Add(this.lblMail);
-            this.groupBox2.Location = new System.Drawing.Point(155, 55);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(398, 218);
             this.groupBox2.TabIndex = 58;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // MedicoCadastroControl
             // 

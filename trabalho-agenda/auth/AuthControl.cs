@@ -18,28 +18,20 @@ namespace trabalho_agenda.Auth
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            #region Cadastro Usuario
             Usuario User = new Usuario();
             User.CPF = mskdCadCPF.Text;
             User.Nome = txtNome.Text;
             User.Email = txtMail.Text;
             User.Telefone = txtTelefone.Text;
             User.Senha = txtCadSenha.Text;
-
-            bool AchouUser = false;
+            #endregion
 
             EditorXML<Usuario> Ed = new EditorXML<Usuario>();
-            List<Usuario> ListaUser = Ed.Deserializar("usuarios.xml", typeof(Usuario));
 
-            foreach (Usuario x in ListaUser)
+            if (User.cpfExiste())
             {
-                if (x.CPF == User.CPF)
-                {
-                    AchouUser = true;
-                }
-            }
-            if (AchouUser == true)
-            {
-                MessageBox.Show("CPF Já cadastrado!");
+                MessageBox.Show("CPF ja cadastrado.");
             }
             else
             {
@@ -56,10 +48,7 @@ namespace trabalho_agenda.Auth
             User.Senha = txtLoginSenha.Text;
 
             EditorXML<Usuario> Ed = new EditorXML<Usuario>();
-            List<Usuario> ListUsuarios = (List<Usuario>)Ed.Deserializar("usuarios.xml", typeof(Usuario));
-
-            bool AchouCPF = false;
-            bool AchouSenha = false;
+            List<Usuario> ListUsuarios = (List<Usuario>)Ed.Deserializar("usuarios.xml");
 
             foreach (Usuario x in ListUsuarios)
             {
