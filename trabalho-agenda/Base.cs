@@ -31,7 +31,7 @@ namespace trabalho_agenda
         }
 
         public void ShowLogin()
-        {
+        {     
             authControl1.Location = new Point(2, 2);
             this.menuPanel.Visible = true;
         }
@@ -62,8 +62,7 @@ namespace trabalho_agenda
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            AllNotVisible();
-            ShowLogin();
+            Application.Restart();
         }
 
         private void btnInicio_Click(object sender, EventArgs e)
@@ -73,6 +72,9 @@ namespace trabalho_agenda
 
         private void AllNotVisible()
         {
+
+            menuPanel.Location = new Point(-1, -1);
+            menuPanel.Visible = true;
             this.medicoCadControl.Visible = false;
             this.pacienteCadControl.Visible = false;
             this.consultaCadControl.Visible = false;

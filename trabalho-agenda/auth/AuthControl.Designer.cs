@@ -111,7 +111,6 @@
             this.mskdCadCPF.Name = "mskdCadCPF";
             this.mskdCadCPF.Size = new System.Drawing.Size(118, 22);
             this.mskdCadCPF.TabIndex = 24;
-            this.mskdCadCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // txtCadSenha
             // 
@@ -204,7 +203,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(455, 181);
+            this.panel1.Location = new System.Drawing.Point(461, 189);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 242);
             this.panel1.TabIndex = 26;
@@ -223,7 +222,7 @@
             this.groupBox2.Controls.Add(this.lblCidade);
             this.groupBox2.Controls.Add(this.lblRua);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(505, 173);
+            this.groupBox2.Location = new System.Drawing.Point(511, 181);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(311, 250);
             this.groupBox2.TabIndex = 25;
@@ -236,7 +235,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.mskdLoginCPF);
-            this.panel2.Location = new System.Drawing.Point(180, 263);
+            this.panel2.Location = new System.Drawing.Point(186, 271);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(224, 160);
             this.panel2.TabIndex = 27;
@@ -244,7 +243,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::trabalho_agenda.Properties.Resources.logo_horizontal;
-            this.pictureBox1.Location = new System.Drawing.Point(180, 181);
+            this.pictureBox1.Location = new System.Drawing.Point(186, 189);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(224, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

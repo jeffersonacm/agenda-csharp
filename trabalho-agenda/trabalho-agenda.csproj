@@ -66,6 +66,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\Consulta.cs" />
     <Compile Include="Consulta\ConsultaCadastroControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

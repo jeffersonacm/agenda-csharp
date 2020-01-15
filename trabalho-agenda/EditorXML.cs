@@ -28,9 +28,15 @@ namespace trabalho_agenda
             List<T> aux = new List<T>();
             aux.Add(objeto);
             Serializar(lista: aux, arquivo: arquivo);
-            List<T> lista = new List<T>();
-            lista.Add(objeto);
-            Serializar(lista, arquivo);
+        }
+
+        public void Serializar(List<T> lista, string arquivo, bool append)
+        {
+            Criar(arquivo);
+            TextWriter writer = new StreamWriter(arquivo);
+            XmlSerializer serializer = new XmlSerializer(lista.GetType());
+            serializer.Serialize(writer, lista);
+            writer.Close();
         }
 
         public List<T> Deserializar(string arquivo)
@@ -52,47 +58,11 @@ namespace trabalho_agenda
             return lista;
         }
 
-        public void Alterar(string arquivo, XElement oldElemento, XElement newElemento)
-        {
-            XDocument xDocument = XDocument.Load(arquivo);
-            var pesquisa = from x in xDocument.Elements(oldElemento.Name) // Procura um XElement
-                           where (x == oldElemento)                         // Com o valor do antigo
-                           select x;
-
-            foreach (XElement xElement in pesquisa)                       // Para cada elemento igual
-                xElement.ReplaceWith(newElemento);                        // Substitui as entradas
-
-            xDocument.Save(arquivo);                                      // Salva as alterações
-        }
-
-        public void Deletar(string arquivo, XElement oldElemento)
-        {
-            Criar(arquivo);
-            XDocument xDocument = XDocument.Load(arquivo);
-            var pesquisa = from x in xDocument.Elements(oldElemento.Name) // Procura um XElement
-                           where (x == oldElemento)                       // Com o valor do antigo
-                           select x;
-
-            foreach (XElement xElement in pesquisa)                       // Para cada elemento igual
-                xElement.Remove();                                        // Deleta as entradas
-
-            xDocument.Save(arquivo);                                      // Salva as alterações
-        }
-
         public void Criar(string arquivo)
         {
-            if (!File.Exists(arquivo))
-                File.Create(arquivo);
+            FileStream fileStream = new FileStream(arquivo, FileMode.OpenOrCreate);
+            fileStream.Close();
         }
 
-        internal class Deserializar : List<Usuario>
-        {
-            private string v;
-
-            public Deserializar(string v)
-            {
-                this.v = v;
-            }
-        }
     }
 }

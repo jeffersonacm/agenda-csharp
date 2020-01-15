@@ -51,7 +51,7 @@
             this.menuPanel.Controls.Add(this.pictureBox1);
             this.menuPanel.Location = new System.Drawing.Point(-1, -1);
             this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(171, 613);
+            this.menuPanel.Size = new System.Drawing.Size(171, 1000);
             this.menuPanel.TabIndex = 1;
             // 
             // btnSair
@@ -132,7 +132,7 @@
             // authControl1
             // 
             this.authControl1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.authControl1.Location = new System.Drawing.Point(860, -1);
+            this.authControl1.Location = new System.Drawing.Point(939, 552);
             this.authControl1.Name = "authControl1";
             this.authControl1.Size = new System.Drawing.Size(991, 613);
             this.authControl1.TabIndex = 2;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 615);
+            this.ClientSize = new System.Drawing.Size(992, 593);
             this.Controls.Add(this.authControl1);
             this.Controls.Add(this.menuPanel);
             this.Name = "Base";

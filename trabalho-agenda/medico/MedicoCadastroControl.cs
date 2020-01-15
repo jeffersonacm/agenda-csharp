@@ -12,24 +12,26 @@ namespace trabalho_agenda.Medico
 {
     public partial class MedicoCadastroControl : UserControl
     {
+        List<Medico> medicos;
         public MedicoCadastroControl()
         {
             InitializeComponent();
+            pesquisarMedicos();
         }
 
         private void buttonCadastrar_Click(object sender, EventArgs e)
         {
             Medico medico = new Medico();
-            medico.CPF = maskedTextCPF.Text;
+            medico.CPF = mskdCPF.Text;
             if (medico.cpfExiste())
                 MessageBox.Show("CPF ja cadastrado.");
             else
             {
                 medico.Nome = textNome.Text;
 
-                medico.DataNasc = dateTimeNascimento.Value;
-                medico.Email = textBoxEmail.Text;
-                medico.Especialidade = textEspecialidade.Text;
+                medico.DataNasc = dtDataNasc.Value;
+                medico.Email = textEmail.Text;
+                medico.Especialidade = selectEspecialidade.Text;
                 medico.Telefone = textTelefone.Text;
                 Endereco endereco = new Endereco();
                 endereco.Bairro = txtBairro.Text;
@@ -65,19 +67,30 @@ namespace trabalho_agenda.Medico
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
+            string pesquisa = maskedTextBox1.Text;
+            dataGridView1.ClearSelection();
 
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                if (dataGridView1.Rows[i].Cells[1].Value.ToString() == pesquisa)
+                    dataGridView1.CurrentCell = dataGridView1.Rows[i].Cells[0];
+            }
         }
 
-        private void btnAlterar_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            medicos.RemoveAt(dataGridView1.CurrentRow.Index);
+            new EditorXML<Medico>().Serializar(medicos, "medicos.xml", false);
+            pesquisarMedicos();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void pesquisarMedicos()
         {
-
+            medicos = new EditorXML<Medico>().Deserializar("medicos.xml");
+            dataGridView1.DataSource = medicos;
+            dataGridView1.ClearSelection();
         }
     }
 }
